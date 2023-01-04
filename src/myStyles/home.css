@@ -1,0 +1,255 @@
+body{
+    margin: 0;
+    color: white;
+    background-color: black;   
+  }
+  
+  .mainContainer,.containerLogin{
+    margin: 3rem;
+  }
+  .secondContainer{
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/moments.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position-y: -1px;
+  }
+  .menuContainer{
+    padding: 1rem;
+    background-color: rgb(21, 19, 19);
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px 5px rgb(208, 213, 139);
+    height: 5.5rem;
+  }
+#div-myNav {
+    margin-left:  auto;
+    margin-right:  auto;
+    display: table;
+    height: 5rem;
+    list-style: none;
+   
+  }
+#div-myNav a{
+    color: rgb(255, 255, 255);
+    background-color: rgb(21, 19, 19);
+    font-size: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 50px;
+    transition: 0.5s;
+    border: none;
+    padding: 0.5rem;
+    position: relative;
+}
+#div-myNav a.router-link-exact-active::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 110%;
+    height: 110%;
+    background: linear-gradient(45deg,
+    red, blue, yellow,
+    red, blue, yellow);
+    background-size: 800%;
+    border-radius: 50px;
+    filter: blur(8px);
+    animation: brillo 20s linear infinite;
+}
+
+#div-myNav a.router-link-exact-active {
+    background-color: rgb(75, 29, 29);
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    transform: translate(50px, 10px);
+}
+
+
+/*animacion*/
+@keyframes brillo{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+
+
+/*login*/
+.containerLogin{
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    height: 27rem;
+    width: 40%;
+    background-color: rgba(34, 30, 30, 0.769);
+    box-shadow: 1px 2px 7px 5px rgba(180, 141, 231, 0.929);
+}
+
+.leftImage{
+    content:"";
+    width: 15rem;
+    height: 27rem;
+    background-image: url(../images/monster.webp);
+    background-size: 420px 435px;
+    background-position-x: -115px;
+    background-repeat: no-repeat;
+}.contaierForm{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.formLogin{
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    margin-top: 3rem;
+}.pass-shower{
+    cursor:pointer;
+}
+
+.register,.textBox{
+    color: rgb(235, 253, 206);
+    background-color: rgb(48, 19, 40);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 3px solid rgba(70, 66, 66, 0.9);
+    outline: 3px;
+    outline-color: rgb(209, 220, 68);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+
+/*login modal*/
+
+.modal-content{
+    background-color: rgba(27, 23, 23, 0.829);
+    box-shadow: 0px 0px 12px 10px rgb(189, 128, 209);
+    color: white;
+    text-align: center;
+}
+.modal-body-container{
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+
+}
+
+.img-preview{
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: rgb(47, 7, 62);
+    border: 3px solid rgba(47, 10, 96, 0.891);
+    transition: 0.4s;
+}
+
+.cameraBTN{
+    background-color: rgb(43, 4, 63);
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 3px solid rgb(58, 13, 91);
+    position: absolute;
+    z-index: 1;
+    margin-left: 2.5rem;
+    margin-top: -2.5rem;
+
+}.cameraBTN:hover{
+    background-color: rgb(81, 33, 94);
+    box-shadow: 0px 2px 5px 7px rgba(52, 190, 80, 0.884);
+}#image-name{
+    color: rgb(225, 201, 79);
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+
+.toast_container{
+    position: fixed;
+    bottom: 6%;
+    left: 6%; 
+    width: 18rem;
+}.toast_head{
+    color: white;
+    background-color: rgba(32, 8, 57, 0.854);
+}.myToast{
+    color: white;
+    background-color: rgba(61, 25, 100, 0.854);
+    border: 0px;
+    box-shadow: 0px 3px 7px 4px rgb(254, 255, 253);
+    width: 100%;
+}.myToast::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 105%;
+    height: 110%;
+    background: linear-gradient(30deg,
+    rgb(244, 124, 255,0.724), rgba(2, 2, 79, 0.724), rgba(176, 191, 80, 0.724),
+    rgb(228, 0, 0), rgba(180, 255, 148, 0.724), rgba(255, 255, 255, 0.724));
+    background-size: 800%;
+    border-radius: 5px;
+    filter: blur(8px);
+    animation: brillo 17s linear infinite;
+}
+.toast_img{
+    width: 3rem;
+    height: 2rem;
+    border: 2px solid rgba(118, 226, 101, 0.45);
+    border-radius: 5px;
+    object-fit: cover;
+}
+.x-close{
+    background-color: rgba(72, 36, 109, 0.854);
+}
+
+
+@media only screen and (max-width: 670px){
+    .mainContainer,.containerLogin{
+    margin: 2rem;
+  }
+    .containerLogin{
+        width: 80%;
+        margin-top: 25%;
+    }
+    .menuContainer{
+        padding: 0.3rem;
+        height: 2.9rem;
+    }#div-myNav a{
+        font-size: 17px;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+    }
+    #div-myNav a.router-link-exact-active{
+        font-size: 19px;
+    }
+
+}
